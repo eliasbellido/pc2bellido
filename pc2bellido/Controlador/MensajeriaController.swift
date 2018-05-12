@@ -10,12 +10,7 @@ import Foundation
 
 class MensajeriaController{
     
-    //por que no sale esto?
     
-    func testeo(){
-        
-        let mivari = "hola"
-    }
     
     func obtenerTelefono() -> [Mensajeria]{
         
