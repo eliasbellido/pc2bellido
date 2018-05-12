@@ -14,6 +14,11 @@
 		642902C720A52B1800D31B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642902C520A52B1800D31B63 /* LaunchScreen.storyboard */; };
 		642902D220A52B1800D31B63 /* pc2bellidoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642902D120A52B1800D31B63 /* pc2bellidoTests.swift */; };
 		642902DD20A52B1800D31B63 /* pc2bellidoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642902DC20A52B1800D31B63 /* pc2bellidoUITests.swift */; };
+		642902EB20A53A2000D31B63 /* PhoneCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642902EA20A53A2000D31B63 /* PhoneCVCell.swift */; };
+		642902EF20A5477F00D31B63 /* DetalleTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642902EE20A5477F00D31B63 /* DetalleTVCell.swift */; };
+		642902F120A547D700D31B63 /* DetalleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642902F020A547D700D31B63 /* DetalleVC.swift */; };
+		642902F420A54A1100D31B63 /* Mensajeria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642902F320A54A1100D31B63 /* Mensajeria.swift */; };
+		642902F720A54D4500D31B63 /* MensajeriaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642902F620A54D4500D31B63 /* MensajeriaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		642902D820A52B1800D31B63 /* pc2bellidoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pc2bellidoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		642902DC20A52B1800D31B63 /* pc2bellidoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pc2bellidoUITests.swift; sourceTree = "<group>"; };
 		642902DE20A52B1800D31B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		642902EA20A53A2000D31B63 /* PhoneCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCVCell.swift; sourceTree = "<group>"; };
+		642902EE20A5477F00D31B63 /* DetalleTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTVCell.swift; sourceTree = "<group>"; };
+		642902F020A547D700D31B63 /* DetalleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleVC.swift; sourceTree = "<group>"; };
+		642902F320A54A1100D31B63 /* Mensajeria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensajeria.swift; sourceTree = "<group>"; };
+		642902F620A54D4500D31B63 /* MensajeriaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensajeriaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +107,10 @@
 		642902BB20A52B1600D31B63 /* pc2bellido */ = {
 			isa = PBXGroup;
 			children = (
+				642902F820A5514E00D31B63 /* ViewController */,
+				642902F520A54D2C00D31B63 /* Controlador */,
+				642902F220A54A0100D31B63 /* Entidad */,
 				642902BC20A52B1600D31B63 /* AppDelegate.swift */,
-				642902BE20A52B1600D31B63 /* ViewController.swift */,
 				642902C020A52B1600D31B63 /* Main.storyboard */,
 				642902C320A52B1800D31B63 /* Assets.xcassets */,
 				642902C520A52B1800D31B63 /* LaunchScreen.storyboard */,
@@ -123,6 +135,33 @@
 				642902DE20A52B1800D31B63 /* Info.plist */,
 			);
 			path = pc2bellidoUITests;
+			sourceTree = "<group>";
+		};
+		642902F220A54A0100D31B63 /* Entidad */ = {
+			isa = PBXGroup;
+			children = (
+				642902F320A54A1100D31B63 /* Mensajeria.swift */,
+			);
+			path = Entidad;
+			sourceTree = "<group>";
+		};
+		642902F520A54D2C00D31B63 /* Controlador */ = {
+			isa = PBXGroup;
+			children = (
+				642902F620A54D4500D31B63 /* MensajeriaController.swift */,
+			);
+			path = Controlador;
+			sourceTree = "<group>";
+		};
+		642902F820A5514E00D31B63 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				642902BE20A52B1600D31B63 /* ViewController.swift */,
+				642902EA20A53A2000D31B63 /* PhoneCVCell.swift */,
+				642902EE20A5477F00D31B63 /* DetalleTVCell.swift */,
+				642902F020A547D700D31B63 /* DetalleVC.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642902F120A547D700D31B63 /* DetalleVC.swift in Sources */,
+				642902EF20A5477F00D31B63 /* DetalleTVCell.swift in Sources */,
+				642902F420A54A1100D31B63 /* Mensajeria.swift in Sources */,
+				642902F720A54D4500D31B63 /* MensajeriaController.swift in Sources */,
 				642902BF20A52B1600D31B63 /* ViewController.swift in Sources */,
+				642902EB20A53A2000D31B63 /* PhoneCVCell.swift in Sources */,
 				642902BD20A52B1600D31B63 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S3D4555TL2;
 				INFOPLIST_FILE = pc2bellido/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S3D4555TL2;
 				INFOPLIST_FILE = pc2bellido/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

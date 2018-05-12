@@ -17,6 +17,7 @@ class ViewController: UIViewController, UICollectionViewDataSource,UICollectionV
     var misTelefonos:[Mensajeria] = []
     
     
+    @IBOutlet weak var collectionView: UICollectionView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -60,15 +61,42 @@ class ViewController: UIViewController, UICollectionViewDataSource,UICollectionV
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
         let telefonoController = MensajeriaController()
         misTelefonos = telefonoController.obtenerTelefono()
         
+        let itemSize = UIScreen.main.bounds.width/2 - 3
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsetsMake(20, 2, 10, 2)
+        layout.itemSize = CGSize(width: itemSize, height: itemSize)
+        
+        layout.minimumInteritemSpacing = 3
+        layout.minimumLineSpacing = 3
+        
+        collectionView.collectionViewLayout = layout
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destino = segue.destination as! DetalleVC
+        
+        let cell = sender as! PhoneCVCell
+        let indexPath = self.collectionView.indexPath(for: cell)
+        
+        destino.telefono = self.misTelefonos[(indexPath?.row)!]
+        
+        
+        //destino.telefono = self.misTelefonos[(collectionView.indexPathForCell)]
+    
+        
     }
 
 

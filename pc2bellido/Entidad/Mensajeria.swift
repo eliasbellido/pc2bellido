@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+class Mensajeria{
+    
+    var foto : String
+    var nombre : String
+    var marca : String
+    var precio : Double
+    
+    init(foto: String, nombre: String, marca: String, precio: Double){
+        
+        self.foto = foto
+        self.nombre = nombre
+        self.marca = marca
+        self.precio = precio
+    }
+    
+}

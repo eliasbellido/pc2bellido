@@ -8,7 +8,9 @@
 
 import UIKit
 
-class DetalleVC: UIViewController {
+class DetalleVC: UIViewController, UITableViewDataSource,UITableViewDelegate {
+    
+    var telefono : Mensajeria?
     
     
     @IBOutlet weak var imagen: UIImageView!
@@ -17,7 +19,41 @@ class DetalleVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.imagen.image = UIImage(named: (self.telefono?.foto)!)
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celda") as! DetalleTVCell
+        
+        switch indexPath.row{
+        case 0:
+            celda.lblLlave.text = "Modelo: "
+            celda.lblValor.text = self.telefono?.nombre
+        case 1:
+            celda.lblLlave.text = "Marca: "
+            celda.lblValor.text = self.telefono?.marca
+        case 2:
+            celda.lblLlave.text = "Precio: "
+            celda.lblValor.text = String(format:"%.2f", (self.telefono?.precio)!)
+            
+            
+            
+        default:
+            celda.lblLlave.text=""
+            celda.lblValor.text=""
+        }
+        
+        return celda
     }
 
     override func didReceiveMemoryWarning() {
